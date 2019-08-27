@@ -1,0 +1,11 @@
+<link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+If animate.css file downloaded then 
+<link rel= "stylesheet" href="animate.css">
+
+<h1 class="    ">Examle</h1>
+
+#yourelement {
+  animation-duration:3s;
+  animation-dealy:2s;
+  animation-iteration-count: infinite;

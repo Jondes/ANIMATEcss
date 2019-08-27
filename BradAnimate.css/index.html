@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <title>Animate.css</title>
+    <style>
+        #section-1 {
+            animation-delay: .5s;
+            animation-duration: 3s;
+            /* animation-iteration-count: 2s; */
+        }
+
+        #section-2 {
+            animation-delay: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="animated slideInDown text-center bg bg-primary text-white p-5">
+            <h1 class='display-4'>Animate.css Sandbox</h1>
+        </header>
+        <section id="section-1" class="animated slideInLeft bg-light p-5 my-3">
+            <h1>Section One</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa expedita odio molestias similique laborum,
+                animi, facere veniam saepe, iure minus deleniti quam exercitationem maiores nulla eveniet delectus magni
+                repellat inventore possimus quibusdam. Cumque adipisci distinctio ipsam iure dolorum excepturi maiores?
+            </p>
+        </section>
+        <section id="section-2" class=" animated slideInRight bg-light p-5 my-3">
+            <h1 id="anim-head">Section Two</h1>
+            <p id="anim-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa expedita odio molestias
+                similique laborum,
+                animi, facere veniam saepe, iure minus deleniti quam exercitationem maiores nulla eveniet delectus magni
+                repellat inventore possimus quibusdam. Cumque adipisci distinctio ipsam iure dolorum excepturi maiores?
+            </p>
+            <button id="animateBtn" class="btn btn-primary">Animate</button>
+            <button id="animateBtn2" class="btn btn-primary">Animate2</button>
+        </section>
+    </div>
+
+    <!-- Card Row starts here -->
+    <!-- <div class="card-deck ">
+        <div class="card card-detail card-text1">
+            <img class="card-img-top img-fluid" src="images/Analytics.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-center">Analytics</h5>
+                <p class="card-text text-center text-justify ">Our amazing tracking platform allows you to view in-depth
+                    analytics for your traffic as well as our dashboard provides proprietary reporting with actionable
+                    statistics to analyze and optimize your results in real-time. Every click gets counted.</p>
+            </div>
+        </div>
+        <div class="card card-detail card-text1 ">
+            <img class="card-img-top img-fluid" src="images/Offer-Well.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-center">Offer Well</h5>
+                <p class="card-text text-center text-justify">Our OfferWall gives your users the most options to earn in
+                    one location. You can deploy a complete rewards-based monetization solution on your site in minutes
+                    as it's quite easy and simple.</p>
+            </div>
+        </div>
+        <div class="card card-detail card-text1 ">
+            <img class="card-img-top img-fluid" src="images/Inventory.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-center">Inventory</h5>
+                <p class="card-text text-center text-justify ">With over 2,000 active campaigns in our system, our
+                    algorithms will find the best converting ones for your placement. Your users have the power to
+                    easily earn by watching videos, downloading apps, taking short surveys, and completing other quick
+                    offers. </p>
+            </div>
+        </div>
+        <div class="card card-detail card-text1">
+            <img class="card-img-top img-fluid" src="images/Support.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-center">Support</h5>
+                <p class="card-text text-center text-justify">Each publisher is assigned a dedicated account manager
+                    that can help you with integration as well as in every aspects. Moreover, your user can contact us
+                    if they're running with issues.</p>
+            </div>
+        </div>
+    </div> -->
+    <!-- Card Row Ends here -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#animateBtn').click(function () {
+                animate('#anim-head', 'bounce');
+                animate('#anim-body', 'rubberBand');
+                return false;
+            });
+
+            $('#animateBtn2').click(function () {
+                animate('header', 'slideOutUp');
+                setTimeout(function () {
+                    $('header').css('visibility', 'hidden');
+                }, 1000);
+                return false;
+            });
+
+            // Animate
+            function animate(element, animation) {
+                $(element).addClass('animated ' + animation);
+                var wait = setTimeout(function () {
+                    $(element).removeClass('animated ' + animation);
+                }, 1000);
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>
